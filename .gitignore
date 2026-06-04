@@ -1,0 +1,138 @@
+# ─── PYTHON VIRTUAL ENVIRONMENT ───────────────────────────
+myvenv/
+venv/
+env/
+ENV/
+.venv
+
+# ─── PYTHON CACHE ─────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ─── TYPE CHECKING & LINTING ──────────────────────────────
+.ruff_cache/
+.pylint.d/
+pyrightconfig.json
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ─── JUPYTER NOTEBOOK ─────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ─── IDE ──────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.code-workspace
+
+# ─── OS ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── NODE / FRONTEND ──────────────────────────────────────
+node_modules/
+frontend/policy-guardian-ai-main/node_modules/
+frontend/policy-guardian-ai-main/.next/
+frontend/policy-guardian-ai-main/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+frontend/**/.env*
+frontend/**/out/
+frontend/**/.next/
+frontend/**/build/
+frontend/**/dist/
+
+# ─── ENVIRONMENT & SECRETS ────────────────────────────────
+.env
+.env.local
+.env.*.local
+secrets.py
+secrets.json
+credentials.json
+
+# ─── LARGE MODEL FILES ────────────────────────────────────
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.h5
+*.pkl
+*.pickle
+models/legal_bert_finetuned/model.safetensors
+models/sentence_transformer/
+
+# ─── TRAINING & EXPERIMENT ARTIFACTS ──────────────────────
+checkpoints/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+week*/
+experiments/
+results/
+evaluation_outputs/
+
+# ─── DATA FILES ───────────────────────────────────────────
+data/raw_pdfs/
+data/processed/
+data/splits/
+data/embeddings/
+*.csv
+*.json
+!config*.json
+!package*.json
+!package-lock.json
+
+# ─── OUTPUT FILES ─────────────────────────────────────────
+outputs/highlighted_pdfs/
+outputs/reports/
+reports/
+*.pdf
+!data/**/*.pdf
+
+# ─── PYTHON PACKAGING ─────────────────────────────────────
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# ─── TESTING ──────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ─── BUILD ARTIFACTS ──────────────────────────────────────
+*.o
+*.a
+*.so
+
+# ─── LOGS ─────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── ARCHIVES ─────────────────────────────────────────────
+*.zip
+*.tar.gz
+*.tar
+*.gz
+
+# ─── TEMPORARY & BACKUP FILES ─────────────────────────────
+*.tmp
+*.temp
+*.bak
+*.backup
+*.pyo
+
+# ─── MISC ─────────────────────────────────────────────────
+.git_backup
+.html
+!frontend/**/*.html
