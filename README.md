@@ -1,4 +1,7 @@
 📄 About This Project
+
 Insurance policy documents are lengthy, legally dense contracts that most policyholders struggle to interpret. Critical clauses — particularly exclusions and conditional restrictions — are often buried in complex language, leading to unexpected claim rejections. This project proposes an automated NLP pipeline that detects hidden exclusions and risky clauses in insurance policy documents without requiring manual legal review.
+
 The system operates through a multi-stage pipeline: insurance PDFs are ingested and segmented into individual clauses, which are then classified using a fine-tuned Legal-BERT model into four categories — Normal, Coverage, Exclusion, and Condition. Semantically related coverage-exclusion pairs are identified using Sentence-BERT embeddings and FAISS similarity search, and a Natural Language Inference (NLI) model then detects logical contradictions between them — flagging cases where a coverage promise is silently negated by an exclusion clause elsewhere in the document.
+
 The pipeline was evaluated on a dataset of 26,037 clauses across 96 real Indian insurance PDFs, achieving a Macro F1 of 0.455 on clause classification (a 57.4% improvement over the zero-shot baseline), detecting 401 NLI contradictions and flagging 631 hidden conditions across the corpus. Each processed document receives a normalized consumer risk score between 0.0 and 1.0, mapped to Low / Medium / High / Very High risk bands, giving policyholders an interpretable, actionable summary of policy risk.
